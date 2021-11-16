@@ -12,7 +12,7 @@ let port = process.env.PORT || 3000;
 app.use(cors());
 app.use(methodOverride());
 app.use(express.urlencoded({extended:true}));
-app.use(express.json);
+app.use(express.json());
 
 let users = ["lisa","homero","marge","bart"];
 
