@@ -22,7 +22,7 @@ app.post("/user/create/:nombre",(req,res)=>{
     res.send("Usuario creado!");
 });
 
-app.get("/user/delete/:nombre",(req,res)=>{
+app.delete("/user/delete/:nombre",(req,res)=>{
     var nameDeleted = users.indexOf(req.params.nombre);
     users.splice( nameDeleted, 1 );
     res.send("Usuario eliminado!");
