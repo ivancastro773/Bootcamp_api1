@@ -18,10 +18,10 @@ let users = ["lisa","homero","marge","bart"];
 
 app.post("/user/create",(req,res)=>{
     const { name, email, alias, password} = req.body;
-    users.push(req.params.name);
-    users.push(req.params.email);
-    users.push(req.params.alias);
-    users.push(req.params.password);
+    users.push(req.body.name);
+    users.push(req.body.email);
+    users.push(req.body.alias);
+    users.push(req.body.password);
     res.send("Usuario creado!");
 });
 
